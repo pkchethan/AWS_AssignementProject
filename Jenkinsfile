@@ -21,7 +21,7 @@ pipeline{
 					java -version
 					mvn -version
 					ls
-					mvn clean package
+					mvn clean test
 					
 				
 				'''
