@@ -10,7 +10,7 @@ pipeline{
 	
 	environment{
 		VERSION='0.5.2'
-		REL_VER ='LINUX_GIT_TEST_1'
+		REL_VER ='RES.4'
 	}
 	
 	stages{
@@ -35,19 +35,13 @@ pipeline{
 	stage('test'){
 			steps{
 				sh ''' 
-					echo "This is TEST with version as ${VERSION} and release as ${REL_VER} updated"
+					echo "This is TEST with version as ${VERSION} and release as ${REL_VER}"
 				'''
 			}
 					}					
 		}
 
-		post
-		{
-			always
-			{
-			cleanWs()
-			}
-		}
+
 
 }
 
