@@ -10,7 +10,7 @@ pipeline {
 			}
 			stage('Build MySQL docker Image'){
            steps{
-           bat 'docker run --name mysqlcontnew -p 3308:3306 -e MYSQL_ROOT_PASSWORD=root123 -e MYSQL_DATABASE=db_petadoption -d mysql'
+           bat 'docker run --name mysqlcontnew -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root123 -e MYSQL_DATABASE=db_petadoption -d mysql'
 		   bat 'docker network create mysqlnetnew'
 		   bat 'docker network list'
 		   bat 'docker network connect mysqlnetnew mysqlcontnew'
