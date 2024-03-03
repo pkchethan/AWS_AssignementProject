@@ -15,7 +15,7 @@ pipeline {
 		   bat 'docker network list'
 		   bat 'docker network connect mysqlnet1 mysqlcont1'
         }     
-			
+			}
            stage('Build Sprint boot docker Image'){
            steps{
            bat 'docker build -t	 appimage1 .'
